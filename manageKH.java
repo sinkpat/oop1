@@ -46,6 +46,7 @@ public class manageKH{
 		
 		String auswahl1 = "";								         // bzgl case 1
 		boolean korrekterDatensatz = false;					         // bzgl case 1
+		boolean allowedInput = false;                                // bzgl case 1
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -147,29 +148,36 @@ public class manageKH{
 						
 						
 						
-						
-						System.out.print("                    Sind die eingegebenen Daten korrekt? (j/n): ");
-						auswahl1 = scan.next();
-						System.out.println("");
-						
-						switch(auswahl1){
-							case "j":
-								korrekterDatensatz = true;
-								break;
-							case "n":
-								korrekterDatensatz = false;
-								break;
-							default:
-								korrekterDatensatz = false;
-								System.out.println("                                     ungültige Eingabe");
-								System.out.println("                           Geben Sie den neuen Datensatz erneut ein.");
-								break;
+						do{
+							System.out.print("                    Sind die eingegebenen Daten korrekt? (j/n): ");
+							auswahl1 = scan.next();
+							System.out.println("");
+							
+							switch(auswahl1){
+								case "j":
+									korrekterDatensatz = true;
+									allowedInput = true;
+									break;
+								case "n":
+									korrekterDatensatz = false;
+									allowedInput = true;
+									break;
+								default:
+									//korrekterDatensatz = false;
+									System.out.println("                                   ungültige Eingabe: " + auswahl1);
+									allowedInput = false;
+									System.out.println("");
+									//System.out.println("                           Geben Sie den neuen Datensatz erneut ein.");
+									break;
+							}
 						}
+						while(allowedInput == false);
+						
 					}
 					while(korrekterDatensatz == false);
 					
 					
-					 /*                                              // ausgabe haupt- und zwischenspeicher und fallzahl
+					/*                                               // ausgabe haupt- und zwischenspeicher und fallzahl
 					
 					System.out.println("haupt: " + name + ", " + vorname + ", " + geschlecht + alter);
 					System.out.println("zwisc: " + name1 + ", " + vorname1 + ", " + geschlecht1 + alter1);
