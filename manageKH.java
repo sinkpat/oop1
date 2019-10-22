@@ -39,7 +39,7 @@ public class manageKH{
 		
 		
 		short fallzahl = 0;
-		short threadSleepTime = 5000;
+		short threadSleepTime = 3000;                                // bzgl ee
 		//boolean schonwiederda = false;                             // nicht mehr von nutzen
 		boolean programmende = false;
 		String auswahl = "";
@@ -52,7 +52,7 @@ public class manageKH{
 		
 		
 		System.out.println("Fertig!");
-		try{Thread.sleep(835);} catch(InterruptedException ex){Thread.currentThread().interrupt();}
+		try{Thread.sleep(335);} catch(InterruptedException ex){Thread.currentThread().interrupt();}
 		System.out.println("");
 		//System.out.println("");
 		System.out.println("");
@@ -87,7 +87,7 @@ public class manageKH{
 		System.out.println("");
 		System.out.println("");
 		
-		try{Thread.sleep(3000);} catch(InterruptedException ex){Thread.currentThread().interrupt();}
+		try{Thread.sleep(1500);} catch(InterruptedException ex){Thread.currentThread().interrupt();}
 		
 		System.out.println("");
 		System.out.println("");
@@ -117,7 +117,7 @@ public class manageKH{
 			System.out.println("                ******************************************************");
 			System.out.println("");
 			//System.out.println("");
-			auswahl = scan.next();
+			auswahl = scan.nextLine();
 			//System.out.println("");
 			System.out.println("");
 			System.out.println("");
@@ -131,15 +131,15 @@ public class manageKH{
 					do{
 						System.out.println("                ******************************************************");
 						System.out.print("                * Nachname des Patienten: ");
-						name1 = scan.next();
+						name1 = scan.nextLine();
 						System.out.print("                * Vorname des Patienten: ");
-						vorname1 = scan.next();
+						vorname1 = scan.nextLine();
 						System.out.print("                * Geschlecht des Patienten (m/w/d): ");
-						geschlecht1 = scan.next();
+						geschlecht1 = scan.nextLine();
 						System.out.print("                * Alter des Patienten: ");
-						alter1 = scan.next();
+						alter1 = scan.nextLine();
 						System.out.print("                * Krankenkasse des Patienten: ");
-						kasse1 = scan.next();
+						kasse1 = scan.nextLine();
 						System.out.println("                ******************************************************");
 						System.out.println("");
 						System.out.println("");
@@ -150,7 +150,7 @@ public class manageKH{
 						
 						do{
 							System.out.print("                    Sind die eingegebenen Daten korrekt? (j/n): ");
-							auswahl1 = scan.next();
+							auswahl1 = scan.nextLine();
 							System.out.println("");
 							
 							switch(auswahl1){
@@ -289,11 +289,11 @@ public class manageKH{
 					System.out.println("");
 					System.out.println("                              Letzter Patientendatensatz");
 					System.out.println("                ******************************************************");
-					System.out.println("                * Nachname des Patienten: " + name);
-					System.out.println("                * Vorname des Patienten: " + vorname);
-					System.out.println("                * Geschlecht des Patienten: " + geschlecht);
-					System.out.println("                * Alter des Patienten: " + alter);
-					System.out.println("                * Krankenkasse des Patienten: " + kasse);
+					System.out.println("                * Nachname: " + name);
+					System.out.println("                * Vorname: " + vorname);
+					System.out.println("                * Geschlecht: " + geschlecht);
+					System.out.println("                * Alter: " + alter);
+					System.out.println("                * Kostenträger: " + kasse);
 					System.out.println("                ******************************************************");
 					System.out.println("");
 					//System.out.println("");
